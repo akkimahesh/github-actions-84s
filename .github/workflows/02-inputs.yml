@@ -9,11 +9,7 @@ on:
       Environment:
         description: 'The environment to deploy to'
         required: true
-        default: 'staging'
         type: string
-        options:
-          - staging
-          - production
 jobs: 
   print-branch:
     runs-on: ubuntu-latest
