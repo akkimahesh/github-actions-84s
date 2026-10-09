@@ -2,14 +2,14 @@ name: 'inputs Action'
 on:
   workflow_dispatch:
     inputs:
-      eranch:
+      branch:
         description: 'The branch to deploy'
         required: true
         type: string
       environment:
         description: 'The environment to deploy to'
         required: true
-        type: string
+        type: environment
 jobs: 
   print-branch:
     runs-on: ubuntu-latest
