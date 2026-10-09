@@ -2,11 +2,11 @@ name: 'inputs Action'
 on:
   workflow_dispatch:
     inputs:
-      Branch:
+      eranch:
         description: 'The branch to deploy'
         required: true
         type: string
-      Environment:
+      environment:
         description: 'The environment to deploy to'
         required: true
         type: string
