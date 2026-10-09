@@ -1,0 +1,24 @@
+name: 'inputs Action'
+on:
+  workflow_dispatch:
+    inputs:
+      Branch:
+        description: 'The branch to deploy'
+        required: true
+        type: string
+      Environment:
+        description: 'The environment to deploy to'
+        required: true
+        default: 'staging'
+        type: string
+        options:
+          - staging
+          - production
+jobs: 
+  print-branch:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print the input branch to STDOUT
+      run: echo  The branch is ${{ inputs.branch }}
+    - name: Print the environment
+      run: echo  The environment is ${{ inputs.environment }}
